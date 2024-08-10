@@ -7,8 +7,6 @@ import { ProductCardProps } from '../interface';
 import { addToCart } from '../store/slice';
 
 const ProductCard: React.FC<ProductCardProps> = ({ id, image, title, description, price, rating }) => {
-
-  const count = useSelector((state: RootState) => state.counter.value)
   const dispatch = useDispatch()
 
   return (

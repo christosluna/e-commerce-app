@@ -1,4 +1,5 @@
 "use client";
+import Head from 'next/head';
 import { useCallback, useEffect, useState } from "react";
 import Header from "@/app/components/Header";
 import SearchBox from "@/app/components/SearchBox";
@@ -133,17 +134,25 @@ export default function Home() {
         onScroll={handleScroll}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {displayedProducts.map(product => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              image={product.image}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              rating={product.rating}
-            />
-          ))}
+            <Head>
+                <title>Product List - My E-commerce Site</title>
+                <meta name="description" content="Browse our wide selection of products." />
+                <meta name="keywords" content="products, e-commerce, online shopping" />
+                <meta property="og:title" content="Product List - My E-commerce Site" />
+                <meta property="og:description" content="Browse our wide selection of products." />
+                <link rel="canonical" href="https://example.com" />
+            </Head>
+            {displayedProducts.map(product => (
+                <ProductCard
+                key={product.id}
+                id={product.id}
+                image={product.image}
+                title={product.title}
+                description={product.description}
+                price={product.price}
+                rating={product.rating}
+                />
+            ))}
         </div>
         {displayedProducts.length === 0 && !loading && (
           <p className="text-center text-gray-500">No products found</p>

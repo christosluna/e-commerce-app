@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import CartTab from './CartTab';
 
-interface HeaderProps {
-  cartItemCount: number;
-}
+import { HeaderProps } from '../interface';
 
 const Header: React.FC<HeaderProps> = ({ cartItemCount }) => {
   const count = useSelector((state: RootState) => state.counter.value);

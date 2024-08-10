@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import { incrementQuantity, decrementQuantity, removeFromCart } from '../store/slice';
 
-interface CartTabProps {
-  setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { CartTabProps } from '../interface';
+
 
 const CartTab: React.FC<CartTabProps> = ({ setIsCartOpen }) => {
   const dispatch = useDispatch();
@@ -75,4 +74,3 @@ const CartTab: React.FC<CartTabProps> = ({ setIsCartOpen }) => {
 };
 
 export default CartTab;
-    

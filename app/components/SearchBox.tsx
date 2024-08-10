@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 
-interface SearchBoxProps {
-  onSearch: (query: string) => void;
-}
+import { SearchBoxProps } from '../interface';
 
 const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
   const [query, setQuery] = useState('');
