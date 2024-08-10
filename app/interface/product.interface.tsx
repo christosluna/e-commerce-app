@@ -15,7 +15,6 @@ type  ProductCardProps = {
     description: string;
     price: number;
     rating: number;
-    onAddToCart: (id: number) => void; 
   }
 
 export type {

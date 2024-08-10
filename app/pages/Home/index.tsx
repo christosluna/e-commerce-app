@@ -11,6 +11,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOption, setSortOption] = useState<SortOption>('title');
   const [products, setProducts] = useState<Product[]>([]);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
@@ -19,7 +20,6 @@ export default function Home() {
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     setPage(1);
-    setProducts([]);
     setDisplayedProducts([]);
     setHasMore(true);
   };
@@ -31,37 +31,34 @@ export default function Home() {
     }
   }, [hasMore, loading]);
 
-  const handleAddToCart = (product: any) => {
-    console.log(`Product with id ${product.id} added to cart`);
-  };
-
   const fetchProducts = useCallback(async (page: number) => {
     if (loading || !hasMore) return;
-  
+
     try {
       setLoading(true);
-  
-      await new Promise(resolve => setTimeout(resolve, 400)); 
-  
+
+      await new Promise(resolve => setTimeout(resolve, 400));
+
       const response = await fetch('http://localhost:3000/products');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-  
+
       const productsPerPage = 10;
       const startIndex = (page - 1) * productsPerPage;
       const newProducts = data.slice(startIndex, startIndex + productsPerPage);
-  
+
       if (newProducts.length < productsPerPage) {
         setHasMore(false);
       }
-  
+
+      setAllProducts(data);
       setProducts(prevProducts => {
         const uniqueProducts = new Map([...prevProducts, ...newProducts].map(product => [product.id, product]));
         return Array.from(uniqueProducts.values());
       });
-  
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -76,13 +73,19 @@ export default function Home() {
   }, [page, hasMore, searchQuery]);
 
   useEffect(() => {
-    if (searchQuery || products.length) {
-      const lowercasedQuery = searchQuery.toLowerCase();
-      const filtered = products.filter(product =>
-        product.title.toLowerCase().includes(lowercasedQuery)
-      );
+    const filterAndSortProducts = () => {
+      let filteredProducts = products;
 
-      const sorted = [...filtered].sort((a, b) => {
+      // Filter by search query
+      if (searchQuery) {
+        const lowercasedQuery = searchQuery.toLowerCase();
+        filteredProducts = allProducts.filter(product =>
+          product.title.includes(searchQuery)
+        );
+      }
+
+      // Sort products
+      const sortedProducts = [...filteredProducts].sort((a, b) => {
         switch (sortOption) {
           case 'price':
             return a.price - b.price;
@@ -90,12 +93,14 @@ export default function Home() {
             return b.rating - a.rating;
           case 'title':
           default:
-            return a.title.localeCompare(b.title);
+            return a.id;
         }
       });
 
-      setDisplayedProducts(sorted);
-    }
+      setDisplayedProducts(sortedProducts);
+    };
+
+    filterAndSortProducts();
   }, [searchQuery, sortOption, products]);
 
   return (
@@ -103,27 +108,31 @@ export default function Home() {
       <Header cartItemCount={cartItemCount} />
 
       <div className="p-5">
-        <SearchBox onSearch={handleSearch} />
-        <div className="flex items-center space-x-4 mb-4">
-          <label htmlFor="sort" className="text-gray-600">Sort by:</label>
-          <select
-            id="sort"
-            value={sortOption}
-            onChange={(e) => setSortOption(e.target.value as SortOption)}
-            className="border border-gray-300 pl-2 rounded-md py-2 px-4"
-          >
-            <option value="title">Title</option>
-            <option value="price">Price</option>
-            <option value="rating">Rating</option>
-          </select>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-4 sm:space-y-0 mb-4">
+          <div className="flex justify-center flex-grow sm:justify-start sm:ml-4">
+            <SearchBox onSearch={handleSearch} />
+          </div>
+          <div className="flex items-center space-x-2 ml-auto">
+            <label htmlFor="sort" className="text-gray-600">Sort by:</label>
+            <select
+              id="sort"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value as SortOption)}
+              className="border border-gray-300 pl-2 rounded-md py-2 px-4"
+            >
+              <option value="title">Title</option>
+              <option value="price">Price</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <div
-        className="space-y-4 p-10 border-2 border-gray-300 rounded-md max-h-[calc(100vh-16rem)] overflow-y-auto"
+        className="space-y-4 p-5 sm:p-10 border-2 border-gray-300 rounded-md max-h-[calc(100vh-16rem)] overflow-y-auto"
         onScroll={handleScroll}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {displayedProducts.map(product => (
             <ProductCard
               key={product.id}
@@ -133,7 +142,6 @@ export default function Home() {
               description={product.description}
               price={product.price}
               rating={product.rating}
-              onAddToCart={() => handleAddToCart(product)}
             />
           ))}
         </div>
