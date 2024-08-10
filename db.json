@@ -1,0 +1,229 @@
+{
+    "products": [
+        {
+          "id": 1,
+          "title": "UltraComfort Ergonomic Chair",
+          "description": "Ergonomic chair with adjustable lumbar support and headrest.",
+          "price": 179.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+1",
+          "rating": 4.5
+        },
+        {
+          "id": 2,
+          "title": "4K Ultra HD Smart TV",
+          "description": "55-inch 4K Ultra HD smart TV with built-in streaming apps.",
+          "price": 499.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+2",
+          "rating": 4.7
+        },
+        {
+          "id": 3,
+          "title": "Wireless Bluetooth Headphones",
+          "description": "Noise-cancelling wireless Bluetooth headphones with 20-hour battery life.",
+          "price": 89.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+3",
+          "rating": 4.2
+        },
+        {
+          "id": 4,
+          "title": "Portable Power Bank",
+          "description": "High-capacity power bank with fast charging and dual USB ports.",
+          "price": 29.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+4",
+          "rating": 4.4
+        },
+        {
+          "id": 5,
+          "title": "Stainless Steel Chef's Knife",
+          "description": "8-inch chef's knife with a sharp, durable stainless steel blade.",
+          "price": 59.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+5",
+          "rating": 4.8
+        },
+        {
+          "id": 6,
+          "title": "Smart Home Security Camera",
+          "description": "1080p HD security camera with night vision and motion detection.",
+          "price": 119.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+6",
+          "rating": 4.6
+        },
+        {
+          "id": 7,
+          "title": "Luxury Bedding Set",
+          "description": "King-size bedding set with high-thread-count sheets and a plush comforter.",
+          "price": 149.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+7",
+          "rating": 4.5
+        },
+        {
+          "id": 8,
+          "title": "High-Performance Laptop",
+          "description": "15-inch laptop with Intel i7 processor and 16GB RAM.",
+          "price": 899.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+8",
+          "rating": 4.3
+        },
+        {
+          "id": 9,
+          "title": "Electric Air Fryer",
+          "description": "3.7-quart electric air fryer with multiple cooking presets.",
+          "price": 79.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+9",
+          "rating": 4.7
+        },
+        {
+          "id": 10,
+          "title": "Fitness Tracker Watch",
+          "description": "Smart fitness tracker with heart rate monitoring and sleep tracking.",
+          "price": 49.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+10",
+          "rating": 4.4
+        },
+        {
+          "id": 11,
+          "title": "Cordless Vacuum Cleaner",
+          "description": "Lightweight cordless vacuum cleaner with powerful suction.",
+          "price": 159.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+11",
+          "rating": 4.6
+        },
+        {
+          "id": 12,
+          "title": "Smart Thermostat",
+          "description": "Wi-Fi enabled smart thermostat with voice control compatibility.",
+          "price": 129.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+12",
+          "rating": 4.8
+        },
+        {
+          "id": 13,
+          "title": "Digital Camera",
+          "description": "Compact digital camera with 20MP resolution and 4K video recording.",
+          "price": 349.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+13",
+          "rating": 4.3
+        },
+        {
+          "id": 14,
+          "title": "Gaming Console",
+          "description": "Latest generation gaming console with 4K gaming capabilities.",
+          "price": 399.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+14",
+          "rating": 4.5
+        },
+        {
+          "id": 15,
+          "title": "Bluetooth Smart Speaker",
+          "description": "Portable Bluetooth speaker with high-fidelity sound and waterproof design.",
+          "price": 69.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+15",
+          "rating": 4.4
+        },
+        {
+          "id": 16,
+          "title": "Professional Camera Lens",
+          "description": "50mm f/1.8 lens with high-quality optics for DSLR cameras.",
+          "price": 199.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+16",
+          "rating": 4.7
+        },
+        {
+          "id": 17,
+          "title": "Electric Toothbrush",
+          "description": "Rechargeable electric toothbrush with multiple brushing modes.",
+          "price": 39.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+17",
+          "rating": 4.6
+        },
+        {
+          "id": 18,
+          "title": "Home Espresso Machine",
+          "description": "Automatic espresso machine with built-in grinder and milk frother.",
+          "price": 299.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+18",
+          "rating": 4.8
+        },
+        {
+          "id": 19,
+          "title": "Stylish Backpack",
+          "description": "Durable and stylish backpack with multiple compartments.",
+          "price": 49.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+19",
+          "rating": 4.3
+        },
+        {
+          "id": 20,
+          "title": "Premium Yoga Mat",
+          "description": "High-density yoga mat with extra cushioning for comfort and grip.",
+          "price": 39.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+20",
+          "rating": 4.5
+        },
+        {
+          "id": 21,
+          "title": "High-Quality Air Purifier",
+          "description": "Air purifier with HEPA filter for removing allergens and pollutants.",
+          "price": 249.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+21",
+          "rating": 4.6
+        },
+        {
+          "id": 22,
+          "title": "Compact Mini Fridge",
+          "description": "Compact mini fridge perfect for small spaces and dorm rooms.",
+          "price": 139.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+22",
+          "rating": 4.4
+        },
+        {
+          "id": 23,
+          "title": "Ergonomic Desk Chair",
+          "description": "Adjustable desk chair with lumbar support and reclining feature.",
+          "price": 159.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+23",
+          "rating": 4.7
+        },
+        {
+          "id": 24,
+          "title": "Wireless Charging Pad",
+          "description": "Qi-compatible wireless charging pad for fast and efficient charging.",
+          "price": 24.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+24",
+          "rating": 4.3
+        },
+        {
+          "id": 25,
+          "title": "Modern Table Lamp",
+          "description": "Stylish table lamp with adjustable brightness and touch controls.",
+          "price": 69.99,
+          "currency": "USD",
+          "image": "https://via.placeholder.com/200?text=Product+25",
+          "rating": 4.6
+        }
+    ]
+}
