@@ -43,7 +43,7 @@
           "price": 59.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+5",
-          "rating": 4.8
+          "rating": 5.0
         },
         {
           "id": 6,
@@ -52,7 +52,7 @@
           "price": 119.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+6",
-          "rating": 4.6
+          "rating": 3.6
         },
         {
           "id": 7,
@@ -97,7 +97,7 @@
           "price": 159.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+11",
-          "rating": 4.6
+          "rating": 3.0
         },
         {
           "id": 12,
@@ -106,7 +106,7 @@
           "price": 129.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+12",
-          "rating": 4.8
+          "rating": 3.0
         },
         {
           "id": 13,
@@ -133,7 +133,7 @@
           "price": 69.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+15",
-          "rating": 4.4
+          "rating": 1.4
         },
         {
           "id": 16,
@@ -142,7 +142,7 @@
           "price": 199.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+16",
-          "rating": 4.7
+          "rating": 2.7
         },
         {
           "id": 17,
@@ -151,7 +151,7 @@
           "price": 39.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+17",
-          "rating": 4.6
+          "rating": 3.6
         },
         {
           "id": 18,
@@ -169,7 +169,7 @@
           "price": 49.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+19",
-          "rating": 4.3
+          "rating": 4.0
         },
         {
           "id": 20,
@@ -214,7 +214,7 @@
           "price": 24.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+24",
-          "rating": 4.3
+          "rating": 2.0
         },
         {
           "id": 25,
@@ -223,7 +223,7 @@
           "price": 69.99,
           "currency": "USD",
           "image": "https://via.placeholder.com/200?text=Product+25",
-          "rating": 4.6
+          "rating": 2.0
         }
     ]
 }
